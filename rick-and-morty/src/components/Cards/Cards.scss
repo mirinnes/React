@@ -42,6 +42,12 @@
                     background-color: #68E4BC;
                     color: #F3FBFB;
                     font-size: 14px;
+                    &:hover {
+                        transition: all 0.2s ease-in-out;
+                        color: #68E4BC;
+                        background-color: #F3FBFB;
+                        border: 2px solid #68E4BC;
+                    }
                 }
             }
             .card-article-status {
@@ -55,9 +61,15 @@
                     padding: 5px;
                     width: 70px;
                     height: 20px;
-                    background-color: #FF6A95;
+                    background-color:  #FF6A95;
                     color: #F3FBFB;
                     font-size: 14px;
+                    &:hover {
+                        transition: all 0.2s ease-in-out;
+                        color: #FF6A95;
+                        background-color: #F3FBFB;
+                        border: 2px solid #FF6A95;
+                    }
                 }
             }
         }
@@ -76,6 +88,12 @@
                 background-color: #51A1E4;
                 color: #F3FBFB;
                 font-size: 14px;
+                &:hover {
+                    transition: all 0.2s ease-in-out;
+                    color: #51A1E4;
+                    background-color: #F3FBFB;
+                    border: 2px solid #51A1E4;
+                }
             }
         }
     }
