@@ -8,36 +8,37 @@ import Cards from './components/Cards/Cards';
 
 function App() {
   const [posts, setPosts] = useState([]);
+  const [location, setLocation] = useState([]);
 
   useEffect(() => {
     axios.get("https://rickandmortyapi.com/api/character")
       .then(res => {
         setPosts(res.data.results);
+        console.log(`resultado de endpoint character`, res.data.results)
       })
       .catch(err => alert(`Error! ${err}`));
   }, []);
 
-  // const getData = async () => {
-  //   try{
-  //     const res = await axios.get("https://rickandmortyapi.com/api/character");
-  //     console.log(res.data.results)
-  //     setPosts(res.data.results);
-  //   }catch(err) {
-  //     alert(`Error getting users: ${err}`);
-  //   }
-  // };
 
-  // useEffect(() => {
-  //   getData();
-  // }, [posts]);
+  useEffect(() => {
+    axios.get("https://rickandmortyapi.com/api/location/")
+    .then(res => {
+      setLocation(res.data.results);
+      console.log(` el resultado de location es :`, res.data.results)
+    })
+    .catch(err => alert(`Error! ${err}`));
+  }, []);
 
   return (
     <section className="content">
       {
         posts.map(post => {
+          //  const characterId = location.find(locationId => post.origin.name === locationId.name || "" );
+          // {name:"unknown"}
+          // console.log(`el find me da: `, characterId); 
           return (
-            <Cards key={post.id} name={post.name} species={post.species} status={post.status} img={post.image}>
-              {console.log(post.image)}
+            <Cards key={post.id} name={post.name} species={post.species} status={post.status} img={post.image} location={post.location.name}>
+              {/* location={post.location} */}
             </Cards>
           )
         })

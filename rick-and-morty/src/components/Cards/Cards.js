@@ -1,7 +1,7 @@
 import React from 'react';
 import './Cards.scss';
 
-const Cards = ({img, name, species, status}) => {
+const Cards = ({img, name, species, status, location}) => {
     return(
         <section className="card">
             <section className="card-img">
@@ -19,6 +19,10 @@ const Cards = ({img, name, species, status}) => {
                         <h5>Status:</h5>
                         <p>{status}</p>
                     </div>
+                </div>
+                <div className="card-article-location"> 
+                    <h5>Location:</h5>
+                    <p>{location}</p>
                 </div>
             </article>
         </section>
