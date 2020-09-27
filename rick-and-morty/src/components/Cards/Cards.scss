@@ -1,0 +1,66 @@
+//reemplazar los colores por variables.
+.card {
+    width: 210px;
+    height: 290px;
+    background-color: #F3FBFB;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0 0 10px lightgray;
+    margin: 30px;
+    .card-img {
+        img {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+        }
+    }
+    .card-article {
+        .card-article-name {
+            color: #584255;
+            font-weight: 800;
+            font-size: larger;
+            margin: 20px 0;
+        }
+        .card-article-species-and-status {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 30px;
+            .card-article-species {
+                h5 {
+                    font-weight: normal;
+                    color: #584255;
+                    margin-bottom: 10px;
+                }
+                p {
+                    border-radius: 5px;
+                    padding: 5px;
+                    width: 70px;
+                    height: 20px;
+                    background-color: #68E4BC;
+                    color: #F3FBFB;
+                    font-size: 14px;
+                }
+            }
+            .card-article-status {
+                h5 {
+                    font-weight: normal;
+                    color: #584255;
+                    margin-bottom: 10px;
+                }
+                p {
+                    border-radius: 5px;
+                    padding: 5px;
+                    width: 70px;
+                    height: 20px;
+                    background-color: #FF6A95;
+                    color: #F3FBFB;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
