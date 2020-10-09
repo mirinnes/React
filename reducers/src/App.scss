@@ -1,0 +1,15 @@
+body {
+    .wizard {
+        width: 500px;
+        height: 200px;
+        background-color: crimson;
+        .wizard__buttons {
+            .wizard__buttons_left {
+                background-color: wheat;
+            }
+            .wizard__buttons_right {
+                background-color: wheat; 
+            }
+        }
+    } 
+}
